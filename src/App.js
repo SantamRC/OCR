@@ -5,11 +5,8 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import 'filepond/dist/filepond.min.css';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 registerPlugin(FilePondPluginImagePreview);
-
-
 
 class App extends React.Component {
     constructor(props){
@@ -75,13 +72,11 @@ class App extends React.Component {
                 <div className="container">
                     <div style={{marginTop : "10%"}} className="row">
                         <div className="col-md-4">
-
                         </div>
-                        <div className="col-md-4">
+                        <div className="dropbox">
                             <FilePond ref={ref => this.pond = ref}
                                 onaddfile={(err,file) =>{
                                     this.doOCR(file);
-
                                 }}
                                 onremovefile={(err,fiile) =>{
                                     this.setState({
@@ -91,7 +86,6 @@ class App extends React.Component {
                                 />
                         </div>
                         <div className="col-md-4">
-
                         </div>
                     </div>
                     <div className="card">
@@ -100,25 +94,19 @@ class App extends React.Component {
                                 <div className="col-md-12">
                                     <i className={"fas fa-sync fa-2x " + (this.state.isProcessing ? "fa-spin" : "")}></i> <span className="status-text">{this.state.isProcessing ? `Processing Image ( ${this.state.pctg} % )` : "Parsed Text"} </span>
                                 </div>
-
                             </div>
-
                         </h5>
                         <div class="card-body">
                             <p class="card-text">{(this.state.isProcessing) ?
-                                    '...........'
-                                    : this.state.ocrText.length === 0 ? "No Valid Text Found / Upload Image to Parse Text From Image" : this.state.ocrText }</p>
-                            </div>
-                        </div>
-
-
-                        <div className="ocr-text">
-
+                                '...........'
+                                : this.state.ocrText.length === 0 ? "No Valid Text Found / Upload Image to Parse Text From Image" : this.state.ocrText }</p>
                         </div>
                     </div>
-
+                    <div className="ocr-text">
+                    </div>
                 </div>
-            );}
-        }
+        </div>
+    )}
+}
 
 export default App;
