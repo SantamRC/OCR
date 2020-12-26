@@ -3,10 +3,12 @@
   "description": "Tesseract OCR implementation in React JS",
   "version": "0.1.0",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "express": "^4.17.1",
     "filepond": "^4.9.4",
     "filepond-plugin-image-preview": "^4.6.0",
     "react": "^16.10.2",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.10.2",
     "react-filepond": "^7.0.1",
     "react-scripts": "3.2.0",

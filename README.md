@@ -9,4 +9,4 @@ A simple react JS implementation integration of Tessearct OCR using Tesseract JS
 
 ## `Examples`
 
-
+<img src='./Examples/exp1.png'>
